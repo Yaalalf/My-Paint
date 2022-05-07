@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        block-size: 100vh;
+        inline-size: 100vW;
+        overflow: hidden;
+        position: relative;
+    }
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        inline-size: 100%;
+        block-size: 10%;
+        background-color: rgba(239, 239, 239, 0.311);
+        position: absolute;
+        top: 0;
+    }
+    a{
+        display: inline-grid;
+        place-items: center;
+        block-size: 40px;
+        inline-size: 120px;
+        background-color: white;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.317);
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 700;
+        color: rgb(43, 49, 41);
+        cursor: pointer;
+
+        transition: all ease 100ms;
+        user-select: none;
+    }
+    button{
+        block-size: 40px;
+        inline-size: 120px;
+        background-color: white;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.317);
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 700;
+        color: rgb(43, 49, 41);
+        cursor: pointer;
+
+        transition: all ease 100ms;
+        user-select: none;
+    }
+    button:hover,a:hover{
+        transform: scale(1.1);
+    }
+    button:active, a:active{
+        transform: scale(1);
+        background-color: rgb(167, 205, 239);
+    }
+    label{
+        block-size: 40px;
+        inline-size: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+
+        
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.317);
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 700;
+        color: rgb(43, 49, 41);
+        
+    }
+    label input{
+        inline-size: 100%;
+    }
+    canvas{
+        block-size: 100%;
+        inline-size: 100%;
+
+        background-color: black;
+    }
+</style>
+
+<body>
+
+    <header>
+        <div>
+            <button class="Cuadrado" type="button">Dibujar Cuadrado</button>
+            <button class="Linea" type="button">Trazar Lineas</button>
+            <button class="Borrar" type="button">Borrar</button>
+            <a class="Guardar"  download="YourFileName.jpg">Guardar Canvas</a>
+        </div>
+           
+            <label for="range">width <input id="range" type="range" min="1"></label>
+            
+    </header>
+    <canvas>
+
+    </canvas>
+    <script src="./index.js" defer>
+
+    </script>
+</body>
+</html>
